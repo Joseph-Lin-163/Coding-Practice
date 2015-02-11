@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include <quadimprov.h>
-#include <quadimprov2.h>
+#include "quadimprov.h"
+#include "quadimprov2.h"
 using namespace std;
 
 int main() {
@@ -12,9 +12,12 @@ int main() {
 
 	Quad *q3;
 	q3 = new Quad[5];
+	cout << "Deleting q3." << endl;
 	delete [] q3;
 
 	Quad2 q4;
+
+	cout << "Deleting q4, q2, then q1." << endl;
 
 	return 0;
 }

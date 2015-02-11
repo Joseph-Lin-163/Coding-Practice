@@ -2,6 +2,11 @@
 #define quadimprov2_h
 #include <math.h>
 
+/*
+	Contains simple constructor using a default parameter, advanced copy constructor,
+	advanced assignment operator, destructor.
+*/
+
 class Quad2 {
 	public:
 		// Normal constructor with default parameter
@@ -15,7 +20,7 @@ class Quad2 {
 			2) Open system resources like a file
 			We need to:
 			1) Determine how much memory is allocated by old variable
-			2) Allocate the same about of memory
+			2) Allocate the same amount of memory
 			3) Copy the contents of the old variable to the new variable appropriately
 		*/
 		Quad2(const Quad2 &src) {

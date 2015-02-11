@@ -3,6 +3,11 @@
 
 #include <math.h>
 
+/*
+	Contains simple constructor, default constructor, default parameter,
+	simple copy constructor, simple destructor, and functions.
+*/
+
 class Quad {
 	private: 
 		int height;
