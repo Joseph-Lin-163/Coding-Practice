@@ -31,5 +31,17 @@ int main() {
 		cout << "Queue is not empty." << endl;
 	cout << a->sizeOfQueue() << endl;
 
+	queue<int> realQueue;
+	realQueue.push(10);
+	realQueue.push(20);
+	cout << "Real Queue's front is: " << realQueue.front() << endl;
+	realQueue.pop();
+	cout << "Real Queue's front is: " << realQueue.front() << endl;
+	realQueue.pop();
+	if (realQueue.empty() == true)
+		cout << "Real Queue is empty." << endl;
+	else
+		cout << "Real Queue isn't empty." << endl;
+
 	return 0;
 }
