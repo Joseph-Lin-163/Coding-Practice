@@ -17,7 +17,7 @@ public:
 	~singlyLinked() {
 		for (int i = 0; i < size; i++) {
 			house *toDelete = head;
-			head = head->next;
+			head = head->next; // So that we still have a reference to the head
 			std::cout << "Deleting " << toDelete->name << endl;
 			delete toDelete;
 		}
@@ -38,20 +38,22 @@ public:
 		if (position == 0) {
 			house *toAdd = new house;
 			toAdd->name = animal;
-			toAdd->next = head;
-			head = toAdd;
+			toAdd->next = head; // point to current head so that you can replace it
+			head = toAdd; // replace current head as new head
 			size++;
 			std::cout << animal << " addition successful!" << endl;
 		}
 		else {
 			house *temp = head;
 
+            // iterate to the position in the list that we want
 			while (temp->next != nullptr) {
 				if (--position == 0)
 					break;
 				temp = temp->next;
 			}
 
+            // if temp->next == nullptr and position didn't have a chance to reach 0
 			if (position != 0)
 				std::cout << "Position is invalid, not enough nodes. Adding "<< animal
 				<< " at end of list." << std::endl;
@@ -59,6 +61,7 @@ public:
 			// To add a pointer to the middle of the list
 			// Create new node, have node point to temp->next
 			// then have temp->next point to new node
+            // i.e. inserting it after temp
 			house *toAdd = new house;
 			toAdd->name = animal;
 			toAdd->next = temp->next;
