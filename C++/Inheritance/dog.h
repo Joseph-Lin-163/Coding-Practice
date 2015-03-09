@@ -10,7 +10,7 @@ public:
 		m_breed = breed;
 	}
 
-	~dog() {
+	virtual ~dog() {
 		std::cout << "Dog destructor called." << std::endl;
 	}
 

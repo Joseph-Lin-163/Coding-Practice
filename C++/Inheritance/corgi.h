@@ -10,7 +10,7 @@ public:
 	corgi(int weight) : dog(weight, "corgi") {
 
 	}
-	~corgi() {
+	virtual ~corgi() {
 		std::cout << "Corgi destructor called." << std::endl;
 	}
 

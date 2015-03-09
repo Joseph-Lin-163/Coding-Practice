@@ -7,7 +7,7 @@ public:
 		m_weight = weight;
 	}
 
-	~animal() {	
+	virtual ~animal() {	
 		std::cout << "Animal destructor called." << std::endl;
 	}
 
