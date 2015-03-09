@@ -7,7 +7,7 @@ public:
 	circle(int rad) {
 		m_rad = rad;
 	}
-	~circle() {
+	virtual ~circle() {
 		std::cout << "Deleting circle!" << std::endl;
 	}
 	virtual double getArea() {

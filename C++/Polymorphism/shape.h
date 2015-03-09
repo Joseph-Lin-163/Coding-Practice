@@ -6,7 +6,7 @@ public:
 	shape() {
 
 	}
-	~shape() {
+	virtual ~shape() {
 		std::cout << "Deleting shape!" << std::endl;
 	}
 	virtual double getArea(){

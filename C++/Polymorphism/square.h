@@ -8,7 +8,7 @@ public:
 		m_x = x;
 		m_y = y;
 	}
-	~square() {
+	virtual ~square() {
 		std::cout << "Deleting square!" << std::endl;
 	}
 	virtual double getArea() {
